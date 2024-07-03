@@ -15,7 +15,7 @@
         3. Thay đổi: id, className, style
         4. Thêm text , HTML
         5. Tạo:
-            <h1 title="Hello" class = "heading" > Hello gúy</h1>
+            <h1 title="Hello" class = "heading" > Hello Guys!</h1>
         6. Tạo:
             <ul>
                 <li>JavaScript 1</li>
@@ -31,7 +31,7 @@
     <script>
         // 5
         // DOM
-        const h1DOM = document.createElement('h1')
+        const h1DOM = document.createElement('h1');
 
         h1DOM.title = 'Hello'
         h1DOM.className = 'heading'
@@ -45,6 +45,7 @@
         // React.render(h1React,document.getElementById('root'))
         console.log(h1React);
 
+        //---------------------------------------------------------------------------------
         // 6
         // DOM
         const ulDOM = document.createElement('ul')
@@ -57,7 +58,7 @@
         ulDOM.appendChild(liDOM2)
         document.body.appendChild(ulDOM)
         // React
-        const ulReact = React.createElement('ul', {id:'ul-id',style:'color: red; font-size:100px'},
+        const ulReact = React.createElement('ul', { id: 'ul-id', style: 'color: red; font-size:100px' },
             React.createElement('li', null, 'JavaScript'),
             React.createElement('li', null, 'PHP')
         )

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+</head>
+
+<body>
+    <!-- 
+        1. Tại sao phải sử dụng React-DOM
+        2. Tại sao lại tách React-DOM ra?
+        3. Render UI
+
+        React-Native ==> iOS, Android
+
+        // Example:
+        <div class="post-item">
+            <h2 title="Học React tại F8">Học React</h2>
+            <p>Học ReactJS từ cơ bản đến nâng cao</p>
+        </div>
+    -->
+    <div id="root"></div>
+    <script>
+        // React
+        const postItem = React.createElement(
+            'div',
+            {
+                className: 'post-item'
+            },
+            React.createElement(
+                'h1',
+                {
+                    title: 'Học React tại F8'
+                },
+                'Học React'
+            ),
+            React.createElement(
+                'p',
+                {},
+                'Học ReactJS từ cơ bản đến nâng cao'
+            )
+        )
+        console.log(postItem)
+        // Cách 1
+        // Get Root Element
+        const rootElement = document.getElementById('root')
+        // Render UI
+        ReactDOM.render(postItem, rootElement)
+
+
+        // Cách 2
+        // ReactDOM.render(postItem, document.getElementById('root'))
+        // ----------------------------------------------------------
+
+        // React
+        const ulItem = React.createElement(
+            'ul',
+            {},
+            React.createElement(
+                'li',
+                {},
+                'Javascript'
+            ),
+            React.createElement(
+                'li',
+                {},
+                'ReactJS'
+            ),
+        )
+        console.log(ulItem)
+        // Render UI
+        ReactDOM.render(ulItem, document.getElementById('root'))
+
+        //----------------------------------------------------------
+
+        // React
+        const h1Item = React.createElement(
+            'h1',
+            {
+                title: 'Hello ReactJS',
+                className: 'Heading'
+            },
+            'Hello ReactJS'
+        )
+        console.log(h1Item)
+        // Render UI
+        ReactDOM.render(h1Item, document.getElementById('root'))
+
+    </script>
+    <!-- <script src="./index.js"></script> -->
+</body>
+
+</html>
